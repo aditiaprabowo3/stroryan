@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+        <%= htmlWebpackPlugin.options.title %> | Story App</title>
+</head>
+
+<body>
+    <header>
+        <nav-app appName="StoryKu"></nav-app>
+    </header>
+    <main class="container py-5">
+        <div class="d-flex flex-column justify-content-center">
+            <h2 class="text-center">Add Story</h2>
+            <form action="#" id="addForm" class="form-floating w-50 mx-auto mt-5" novalidate>
+                <textarea-with-validation inputId="descInput" labelName="Description" class="form-floating" rows="10" invalidMessage="Input Kosong" required></textarea-with-validation>
+                <div class="my-3">
+                    <input-image-with-preview inputId="imgInput" labelName="Photo" invalidMessage="Input Kosong" isValid required></input-image-with-preview>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button type="submit" class="btn  mt-3 btn-primary" id="submitBtn">
+              Submit
+            </button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div class="main-footer">
+            <div class="container px-3 py-4">
+                <footer-app></footer-app>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
